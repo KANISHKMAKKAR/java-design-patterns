@@ -114,4 +114,17 @@ class BallThreadTest {
           verifyNoMoreInteractions(exceptionHandler);
         });
   }
+  
+  @Test
+  void testStopWhileSuspended() throws InterruptedException {
+    var t = new BallThread();
+    var item = mock(BallItem.class);
+    t.setTwin(item);
+    t.suspendMe();
+    t.start();
+    sleep(300);
+    t.stopMe();
+    t.join();
+    verifyNoMoreInteractions(item);
+  }
 }
