@@ -114,3 +114,4 @@ class BallThreadTest {
           verifyNoMoreInteractions(exceptionHandler);
         });
   }
+}
