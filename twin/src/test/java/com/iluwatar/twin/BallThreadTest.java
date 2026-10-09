@@ -114,7 +114,6 @@ class BallThreadTest {
           verifyNoMoreInteractions(exceptionHandler);
         });
   }
-  
   /** Verify if the BallThread can be stopped while suspended */
   @Test
   void testStopWhileSuspended() {
@@ -143,7 +142,6 @@ class BallThreadTest {
           verifyNoMoreInteractions(ballItem);
         });
   }
-
   /** Verify if the BallThread exits gracefully when interrupted while suspended */
   @Test
   void testInterruptWhileSuspended() {
